@@ -37,4 +37,4 @@ I deployed to model to HuggingFace Spaces Gradio App. The implementation can be 
 <img src = "App/deployment/gradio_app.png" width="700" height="350">
 
 # API integration with GitHub Pages
-The deployed model API is integrated [here](msi1427.github.io/Cap-Recognizer/) in GitHub Pages Website. Implementation and other details can be found in `docs` folder.
+The deployed model API is integrated [here](https://rhasan97.github.io/Snake-Recognizer/) in GitHub Pages Website. Implementation and other details can be found in the `docs` folder.
