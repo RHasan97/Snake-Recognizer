@@ -2,15 +2,27 @@
 title: Home
 layout: page
 ---
+
 <input id="photo" type="file">
 <div id="Results"></div>
-async function loaded(reader) {   
-    response = await fetch("https://rhasan97-snake-recognizer.hf.space/predict"), { 
-        method:'POST',headers: { "Content-Type":"application/json" },
-        body: JSON.stringfly({data:[reader.results]})}
 
-    const json = await response.json();
-    const label= json['data'][0]['lebel']
+<script>
+    async function loader(reader) {
+        const response_0 = await fetch("https://raw.githubusercontent.com/gradio-app/gradio/main/test/test_files/bus.png");
+        const exampleImage = await response_0.blob();
+
+        async function client(url) {
+        const app = await client("https://rhasan97-snake-recognizer.hf.space/");
+        }
+
+        
+        const result = await app.predict("/predict", [
+            exampleImage,  // blob in 'photo' Image component
+        ]);
+
+    console.log(result.data);
+    const json = await response_0.json();
+    const label= json['data'][0]['lebel'];
     results.innerHTML = `<br/> <img src = "${reader.result}" width="500"> <p>${label}</p>`;
     }
     function read() {
@@ -19,3 +31,4 @@ async function loaded(reader) {
         reader.readAsDataURL(photo.files[0]);
     }
     photo.addEventListener('input', read);
+    </script>
