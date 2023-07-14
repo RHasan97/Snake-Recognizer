@@ -1,34 +1,44 @@
 ---
-title: Home
+title: snake recognizer
 layout: page
 ---
 
 <input id="photo" type="file">
 <div id="Results"></div>
-
 <script>
-    async function loader(reader) {
-        const response_0 = await fetch("https://raw.githubusercontent.com/gradio-app/gradio/main/test/test_files/bus.png");
-        const exampleImage = await response_0.blob();
-
-        async function client(url) {
-        const app = await client("https://rhasan97-snake-recognizer.hf.space/");
-        }
-
+async function predictSnake() {
+        const photo = document.getElementById("photo");
+        const results = document.getElementById("Results");
         
-        const result = await app.predict("/predict", [
-            exampleImage,  // blob in 'photo' Image component
-        ]);
 
-    console.log(result.data);
-    const json = await response_0.json();
-    const label= json['data'][0]['lebel'];
-    results.innerHTML = `<br/> <img src = "${reader.result}" width="500"> <p>${label}</p>`;
-    }
-    function read() {
+        const file = photo.files[0];
         const reader = new FileReader();
-        reader.addEventListener('load', () => loaded(reader))
-        reader.readAsDataURL(photo.files[0]);
+
+        reader.onload = async function(event) {
+            const imageData = event.target.result.split(',')[1];
+
+        const response = await fetch ("https://rhasan97-snake-recognizer.hf.space/predict",{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ data:[reader.result]})});
+
+        const result = await response.json();
+        const label=result['data'];
+        const imageElement = document.createElement("img");
+        imageElement.src = event.target.result;
+        imageElement.width = 500;
+
+        results.innerHTML = "";
+        results.appendChild(imageElement);
+        results.innerHTML += "<p>" + label + "</p>";
+        };
+
+        reader.readAsDataURL(file);
     }
-    photo.addEventListener('input', read);
-    </script>
+
+    const photo = document.getElementById("photo");
+    photo.addEventListener("input", predictSnake);
+</script>
+
