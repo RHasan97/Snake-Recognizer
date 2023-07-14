@@ -34,7 +34,7 @@ Details can be found in `Notebooks/snake_data_prep.ipynb`
 
 # Model Deployment
 I deployed to model to HuggingFace Spaces Gradio App. The implementation can be found in the `App` folder [here](https://huggingface.co/spaces/Rhasan97/snake-recognizer). <br/>
-<img src = "App/deployment/gradio_app.png" width="700" height="350">
+<img src = "App/deployment/gradio app.png" width="700" height="350">
 
 # API integration with GitHub Pages
 The deployed model API is integrated [here](https://rhasan97.github.io/Snake-Recognizer/) in GitHub Pages Website. Implementation and other details can be found in the `docs` folder.
