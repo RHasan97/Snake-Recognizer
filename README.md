@@ -33,7 +33,7 @@ Details can be found in `Notebooks/snake_data_prep.ipynb`
 **Data Cleaning:** The longest portion of the time spent was this one. There were numerous noises as I collected the data from the browser. Additionally, some of the photographs contained different shapes and objects. Using Fastai ImageClassifierCleaner, I updated and cleaned the data. Except for the last occasion, which was the last iteration of the model, I purged the data after every training or fine-tuning session. <br/>
 
 # Model Deployment
-I deployed to model to HuggingFace Spaces Gradio App. The implementation can be found in the `App` folder or [here]([https://huggingface.co/spaces/msideadman/cap-recognizer](https://huggingface.co/spaces/Rhasan97/snake-recognizer). <br/>
+I deployed to model to HuggingFace Spaces Gradio App. The implementation can be found in the `App` folder [here](https://huggingface.co/spaces/Rhasan97/snake-recognizer). <br/>
 <img src = "App/deployment/gradio_app.png" width="700" height="350">
 
 # API integration with GitHub Pages
