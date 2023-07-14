@@ -5,10 +5,7 @@ layout: Page
 <input id="photo" type="file">
 <div id="Results"></div>
 <script>
-
     async function loaded(reader) {   
-    const response = await import { client } from "@gradio/client";
-
     const response_0 = await fetch("https://raw.githubusercontent.com/gradio-app/gradio/main/test/test_files/bus.png");
     const exampleImage = await response_0.blob();
                             
@@ -17,5 +14,14 @@ layout: Page
                     exampleImage, 	// blob in 'photo' Image component
         ]);
 
+    const json = await response_0.json();
     console.log(result.data);
-<script>
+    results.innerHTML = `<br/> <img src = "${reader.result}" width="500"> <p>${label}</p>`;
+    }
+    function read() {
+        const reader = new FileReader();
+        reader.addEventListener('load', () => loaded(reader))
+        reader.readAsDataURL(photo.files[0]);
+    }
+    photo.addEventListener('input', read);
+</script>
