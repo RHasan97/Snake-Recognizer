@@ -1,4 +1,4 @@
-remote theme: alshedivat/al-folio@master
+remote theme: wowthemesnet / mediumish-theme-jekyll@master
 plugin: 
 - jekyll-remote-theme
 
