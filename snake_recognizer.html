@@ -11,7 +11,6 @@ async function loaded(reader) {
 
     const json = await response.json();
     const label= json['data'][0]['lebel']
-    console.log(result.data);
     results.innerHTML = `<br/> <img src = "${reader.result}" width="500"> <p>${label}</p>`;
     }
     function read() {
