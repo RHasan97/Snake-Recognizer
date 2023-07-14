@@ -1,6 +1,6 @@
-remote theme: alshedivat/al-folio@main
+remote theme: alshedivat/al-folio@master
 plugin: 
--jekyll-remote-theme
+- jekyll-remote-theme
 
 title: Snake-Recognizer
 description: An image classifier model that classifies 18 different types of venomous snakes.
