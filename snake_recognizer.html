@@ -6,7 +6,7 @@ layout: page
 <div id="Results"></div>
 <script>
     async function loaded(reader) {   
-    response = await fetch("https://rhasan97-snake-recognizer.hf.space/run/predict"), { 
+    response = await fetch("https://rhasan97-snake-recognizer.hf.space/predict"), { 
         method:'POST',headers: { "Content-Type":"application/json" },
         body: JSON.stringfly({data:[reader.results]})}
 
