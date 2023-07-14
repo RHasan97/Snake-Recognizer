@@ -3,7 +3,7 @@ title: Home
 layout: page
 ---
 
-# Image Recognizer:
+# Recognizer:
 Can classify 18 different types of venomous snakes <br/>
 Venomous snakes:<br/>
 1. Monocled cobra
