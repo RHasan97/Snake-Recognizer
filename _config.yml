@@ -1,4 +1,4 @@
-remote theme: wowthemesnet / mediumish-theme-jekyll@master
+remote theme: andreondra/jekyll-theme-simplex@master
 plugin: 
 - jekyll-remote-theme
 
