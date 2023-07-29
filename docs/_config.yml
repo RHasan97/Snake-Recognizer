@@ -1,8 +1,8 @@
-remote theme: daviddarnes/alembic@master
-plugin: 
+remote theme: daviddarnes/alembic@main
+plugins: 
 - jekyll-remote-theme
 
-title: Snake-Recognizer
+title: Snake Recognizer
 description: An image classifier model that classifies 18 different types of venomous snakes.
 
 author:
