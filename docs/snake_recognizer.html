@@ -18,7 +18,7 @@ async function predictSnake() {
             const imageData = event.target.result.split(',')[1];
 
         const response = await fetch ("https://rhasan97-snake-recognizer.hf.space/run/predict",{
-            method: "POST",
+            method:"POST",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -41,4 +41,3 @@ async function predictSnake() {
     const photo = document.getElementById("photo");
     photo.addEventListener("input", predictSnake);
 </script>
-
