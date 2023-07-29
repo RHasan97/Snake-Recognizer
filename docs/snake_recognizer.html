@@ -1,43 +1,26 @@
 ---
-title:Snake-Recognizer
-layout:page
+title: Snake-Recognizer
+layout: page
 ---
 
 <input id="photo" type="file">
-<div id="Results"></div>
+<div id="results"></div>
 <script>
-async function predictSnake() {
-        const photo = document.getElementById("photo");
-        const results = document.getElementById("Results");
-        
-
-        const file = photo.files[0];
-        const reader = new FileReader();
-
-        reader.onload = async function(event) {
-            const imageData = event.target.result.split(',')[1];
-
+    async function loaded(reader) {   
         const response = await fetch ("https://rhasan97-snake-recognizer.hf.space/run/predict",{
             method:"POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({ data:[reader.result]})});
-
-        const result = await response.json();
-        const label=result['data'][0]['label'];
-        const imageElement = document.createElement("img");
-        imageElement.src = event.target.result;
-        imageElement.width = 500;
-
-        results.innerHTML = "";
-        results.appendChild(imageElement);
-        results.innerHTML += "<p>" + label + "</p>";
-        };
-
-        reader.readAsDataURL(file);
+    const result = await response.json();
+    const label= result['data'][0]['label'];
+    results.innerHTML = `<br/> <img src = "${reader.result}" width="500"> <p>${label}</p>`;
     }
-
-    const photo = document.getElementById("photo");
-    photo.addEventListener("input", predictSnake);
+    function read() {
+        const reader = new FileReader();
+        reader.addEventListener('load', () => loaded(reader))
+        reader.readAsDataURL(photo.files[0]);
+    }
+    photo.addEventListener('input', read);
 </script>
