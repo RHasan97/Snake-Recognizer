@@ -4,8 +4,8 @@ layout: page
 ---
 
 # Snake Recognizer:
-Can classify 18 different types of venomous snakes <br/>
-Venomous snakes:<br/>
+This image classifier can classify 18 different types of venomous snakes: <br/>
+
 1. Monocled cobra
 2. Egyptian cobra
 3. Black-necked spitting cobra
