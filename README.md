@@ -1,3 +1,5 @@
+<img src = "App/1323185.png" width="1400" height="350">
+
 # Snake-Recognizer
 This is an image classification model. It can classify 18 different types of venomous snakes <br/>
 The types the model is able to identify:<br/>
