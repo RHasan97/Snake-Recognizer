@@ -31,7 +31,15 @@ The types the model is able to identify:<br/>
 Details can be found in `Notebooks/snake_data_prep.ipynb`
 
 # Training and Data Cleaning
-**Training:** Fine-tuned a resnet34 model for 5 epochs (4 times) and got up to ~92% accuracy. <br/>
+**Training:** Fine-tuned using resnet34, resnet50, resnet101, and resnet152 models for 5 epochs (4 times) each and got up to ~95% accuracy using the resnet34 model <br/>
+**Models Performance:**
+| Models          | Accuracy Score(%)  |
+|:----------------:|:----------------:|
+| resnet34        |       94.2        |
+| resnet50        | 92.6    | 
+| resnet101       | 93.4   | 
+| resnet152       | 94.5    | 
+
 **Data Cleaning:** The longest portion of the time spent was this one. There were numerous noises as I collected the data from the browser. Additionally, some of the photographs contained different shapes and objects. Using Fastai ImageClassifierCleaner, I updated and cleaned the data. Except for the last occasion, which was the last iteration of the model, I purged the data after every training or fine-tuning session. <br/>
 
 # Model Deployment
