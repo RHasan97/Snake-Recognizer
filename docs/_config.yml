@@ -1,4 +1,4 @@
-remote_theme:jekyllt/jasper@master
+remote_theme:jekyllt/jasper2@master
 plugins:
 - jekyll-remote-theme
 
