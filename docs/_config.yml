@@ -1,9 +1,6 @@
-remote_theme:remote_theme: benbalter/retlab@master
+remote_theme:remote_theme: daviddarnes/garth@master
 plugins:
-  - jekyll-seo-tag
-  - jekyll-avatar
-  - jekyll-github-metadata
-  - jekyll-feed
+  - jekyll-paginate
 
 title: Snake-Recognizer
 description: An image classifier model that classifies 18 different types of venomous snakes.
