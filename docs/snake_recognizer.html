@@ -32,12 +32,9 @@ layout: page
 </head>
 
 
-
-
-
 <body>
-    <input id="photo" type="file">
-    <div id="results"></div>
+<input id="photo" type="file">
+<div id="results"></div>
     <script>
         async function loaded(reader) {   
             const response = await fetch ("https://rhasan97-snake-recognizer.hf.space/run/predict",{
