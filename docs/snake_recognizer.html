@@ -10,49 +10,46 @@ layout: page
             background-position: center; 
         }
         .code-container {
-            background-color:(0, 0, 0, 0.1) ; 
+            background-color: rgba(0, 0, 0, 0.1);
             padding: 20px; 
             border-radius: 10px; 
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
-        
-        #text {
-            color: white;
-            font-size: 20px;
-            align-items: center;
+        h1 {
+            color: white; /* Change title text color */
         }
         #photo {
-            color: white;
+            color: white; /* Change input text color */
         }
-        #result {
-            color: white;
+        #results {
+            color: white; /* Change result text color */
         }
-        
     </style>
 </head>
-<div class="code-container">
-    <div class='#text'>
+<body>
+    <div class="code-container">
+        <h1>Snake Recognizer</h1>
         <input id="photo" type="file">
         <div id="results"></div>
-            <script>
-                async function loaded(reader) {   
-                    const response = await fetch ("https://rhasan97-snake-recognizer.hf.space/run/predict",{
-                        method:"POST",
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                        body: JSON.stringify({ data:[reader.result]})});
-                const result = await response.json();
-                const label= result['data'][0]['label'];
-                results.innerHTML = `<br/> <img src = "${reader.result}" width="500"> <p>${label}</p>`;
-                }
-                function read() {
-                    const reader = new FileReader();
-                    reader.addEventListener('load', () => loaded(reader))
-                    reader.readAsDataURL(photo.files[0]);
-                }
-                photo.addEventListener('input', read);
-            </script>
-        </div>
-</div>
+        <script>
+            async function loaded(reader) {   
+                const response = await fetch ("https://rhasan97-snake-recognizer.hf.space/run/predict",{
+                    method:"POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ data:[reader.result]})});
+            const result = await response.json();
+            const label= result['data'][0]['label'];
+            results.innerHTML = `<br/> <img src = "${reader.result}" width="500"> <p>${label}</p>`;
+            }
+            function read() {
+                const reader = new FileReader();
+                reader.addEventListener('load', () => loaded(reader))
+                reader.readAsDataURL(photo.files[0]);
+            }
+            photo.addEventListener('input', read);
+        </script>
+    </div>
+</body>
   
