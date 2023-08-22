@@ -4,6 +4,22 @@ layout: page
 ---
 <head>
     <style>
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            height: 5ch;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 25px;
+        } 
+        
         body {
             background-image: url('https://st4.depositphotos.com/11639344/22517/i/450/depositphotos_225179234-stock-photo-asian-rainforest-jungle-august.jpg');
             background-size: cover;
@@ -21,12 +37,10 @@ layout: page
             font-size: 20px;
             align-items: center;
         }
-        #photo {
-            color: white; 
-        }
-        #results {
-            color: white; 
+        
     </style>
+    <div class="title"><b>Recipe Classifier</b></div>
+</head>
 <div class="code-container">
     <div class='#text'>
         <input id="photo" type="file">
