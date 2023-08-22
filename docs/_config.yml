@@ -1,4 +1,4 @@
-remote_theme:remote_theme: daviddarnes/alembic@main
+remote_theme: daviddarnes/alembic@main
 plugins:
 - jekyll-sitemap
 - jekyll-mentions
