@@ -2,19 +2,22 @@
 title: Snake-Recognizer
 layout: page
 ---
-<input id="photo" type="file">
-
-<style>
-    body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('https://img.freepik.com/free-photo/ingredients-cooking-gray-concrete_127032-2082.jpg?w=2000');
+<head>
+    <style>
+        body {
+            background-image: url('https://st4.depositphotos.com/11639344/22517/i/450/depositphotos_225179234-stock-photo-asian-rainforest-jungle-august.jpg');
             background-size: cover;
-            background-position: center;
-         {
-</style>
-<body>
+            background-position: center; 
+        }
+        .code-container {
+            background-color:(0, 0, 0, 0.1) ; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+<div class="code-container">
+    <input id="photo" type="file">
     <div id="results"></div>
         <script>
             async function loaded(reader) {   
@@ -35,5 +38,5 @@ layout: page
             }
             photo.addEventListener('input', read);
         </script>
-</body>
+</div>
   
