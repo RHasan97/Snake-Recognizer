@@ -1,9 +1,12 @@
-remote_theme:daviddarnes/garth-jekyll-theme@master
+remote_theme:remote_theme: benbalter/retlab@master
 plugins:
-  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-avatar
+  - jekyll-github-metadata
+  - jekyll-feed
 
 title: Snake-Recognizer
 description: An image classifier model that classifies 18 different types of venomous snakes.
 
-author:
-  name: A B M RAGIB HASAN
+#author:
+  #name: A B M RAGIB HASAN
