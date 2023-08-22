@@ -31,7 +31,7 @@ The types the model is able to identify:<br/>
 Details can be found in `Notebooks/snake_data_prep.ipynb`
 
 # Training and Data Cleaning
-**Training:** Fine-tuned using resnet34, resnet50, resnet101, and resnet152 models for 5 epochs (4 times) each and got up to ~95% accuracy using the resnet34 model <br/>
+**Training:** Fine-tuned using resnet34, resnet50, resnet101, and resnet152 models for 5 epochs (4 times) each and got up to ~95% accuracy using the resnet152 model <br/>
 **Models Performance:**
 | Models          | Accuracy Score(%)  |
 |:----------------:|:----------------:|
